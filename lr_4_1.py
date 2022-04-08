@@ -15,14 +15,10 @@ class Control_table:
             for i in range(len(list_tokens)):
                 if "n"  == list_tokens[i]:
                     self.stack_tokens += "T"
-                    print(self.stack_tokens, "свёртка по правилу (3)")
-
-                    
-
+                    print(self.stack_tokens, "свёртка по правилу (3)")                
                     if "E+T" in self.stack_tokens:
                         self.stack_tokens = self.stack_tokens.replace("E+T", "E")
                         print(self.stack_tokens, "свёртка по правилу (1)")
-
                 else:
                     self.stack_tokens += list_tokens[i]
                     print(self.stack_tokens, "перенос")
