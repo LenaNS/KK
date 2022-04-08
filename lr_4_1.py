@@ -4,7 +4,6 @@ class TreatmentData:
         self.tokens = ""
 
     def divide_tokens(self):
-        # здесь должна быть нормальная обработка через регулярные выражения
         self.list_tokens = self.chain
         print(f"tokens: {self.list_tokens}")
         return self.list_tokens
