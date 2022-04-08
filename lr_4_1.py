@@ -4,6 +4,7 @@ class TreatmentData:
         self.tokens = ""
 
     def divide_tokens(self):
+        # здесь должна быть нормальная обработка через регулярные выражения
         self.list_tokens = self.chain
         print(f"tokens: {self.list_tokens}")
         return self.list_tokens
@@ -18,15 +19,15 @@ class Control_table:
                     #list_tokens = list_tokens.replace(list_tokens[i], "T")
                     self.stack_tokens += "T"
                     print(self.stack_tokens)
-                        if "T" in self.stack_tokens:
-                            list_tokens = list_tokens.replace("T", "E")
-                            print(self.stack_tokens)
-                        if "E+T" in list_tokens:
-                             self.stack_tokens = self.stack_tokens.replace("E+T", "E")
-                            print(self.stack_tokens)
-                        if "(E)" in list_tokens:
-                                self.stack_tokens = self.stack_tokens.replace("(E)", "T")
-                                print(self.stack_tokens)
+                    if "T" in self.stack_tokens:
+                        list_tokens = list_tokens.replace("T", "E")
+                        print(self.stack_tokens)
+                    if "E+T" in list_tokens:
+                        self.stack_tokens = self.stack_tokens.replace("E+T", "E")
+                        print(self.stack_tokens)
+                    if "(E)" in list_tokens:
+                        self.stack_tokens = self.stack_tokens.replace("(E)", "T")
+                        print(self.stack_tokens)
                 else:
                     self.stack_tokens += list_tokens[i]
 
