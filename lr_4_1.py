@@ -6,7 +6,6 @@ class TreatmentData:
 
     def divide_tokens(self):
         self.list_tokens = self.chain
-        print(f"tokens: {self.list_tokens}")
         return self.list_tokens
 
 class Control_table:
@@ -31,7 +30,7 @@ class Control_table:
             print(self.stack_tokens)
                  
 class Analyzer:
-    treatment_data = TreatmentData( chain = input("Enter the chain: "))
+    treatment_data = TreatmentData( chain = input("Введите цепочку символов: "))
     treatment_data.divide_tokens()
     control_table = Control_table()
     control_table.proverka(treatment_data.list_tokens)
